@@ -27,7 +27,7 @@ def queryToDataFrame(query):
 
 
 def describeTable(tablename):
-    query = f"""describe {tablename};"""
+    query = f"""DESCRIBE {tablename};"""
     cursor.execute(query)
     rows = cursor.fetchall()
     df = pd.DataFrame(data=rows,columns=cursor.column_names)
