@@ -26,7 +26,7 @@ def queryToDataFrame(query):
 
 
 
-def describeTable(table_name):
+def describe_Table(table_name):
     query = f"""DESCRIBE {tablename};"""
     cursor.execute(query)
     rows = cursor.fetchall()
